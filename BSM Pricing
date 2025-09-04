@@ -1,3 +1,15 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Sep  4 15:30:32 2025
+
+@author: ericl
+"""
+
+import numpy as np
+from scipy.stats import norm
+
+rng = np.random.default_rng(12345)
+
 # initialize the parameters
 x0 = 50
 r = 0.02
