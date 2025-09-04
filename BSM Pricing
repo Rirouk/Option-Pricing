@@ -1,0 +1,12 @@
+# initialize the parameters
+x0 = 50
+r = 0.02
+sigma = 0.3
+K = 45
+N = 30      # number of days till maturity
+T = N/360      # convert days to year to match the annual parameters
+# the 2 ds
+d1 = (np.log(x0/K)+(r+1/2*sigma**2)*T)/(sigma*np.sqrt(T))
+d2 = d1 - sigma*np.sqrt(T)
+# the BSM formula for call
+vc0 = x0*norm.cdf(d1) - np.exp(-r*T)*K*norm.cdf(d2)
